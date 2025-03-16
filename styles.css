@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: relative;
+}
+
+/* SIP TRIP Logo */
+.logo {
+  color: black;
+  font-size: 80px;
+  font-family: "Courier New", monospace;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+
+/* Name on Right */
+.name {
+    font-size: 45px;
+    font-family: 'Playfair Display', serif;
+    color: #794022;
+    text-shadow: 3px 3px 2px gray;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background-color: #a4907c;
+    width: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+/* Dots Before Menu Items */
+.navbar li::before {
+    content: "•";
+    font-size: 18px;
+    color: #5a3e2b;
+    margin-right: 8px;
+}
+
+/* Links */
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #794022;
+}
+
+/* About */
+.content {
+    flex: 1;
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    left: 0;
+    right: 0;
+    padding-left: 50px;
+}
+
+.content img#photo {
+    width: 40%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.about-me {
+    width: 40%;
+    margin-left: 80px;
+    align-items: center;
+}
+
+.about-me span#about-title {
+    font-family: "Courier New", monospace;
+    font-weight: 300;
+    font-size: 80px;
+    display: flex;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-me span#about-content {
+    padding-top: 5cm;
+    font-family: "Courier New", monospace;
+    font-weight: 300;
+    font-size: 30px;
+    word-wrap: normal;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+/* Likes */
+.hobby {
+    display: flex;
+    flex-direction: column;
+    gap: 2cm;
+    margin-left: 2cm;
+    font-size: 30px;
+    font-family: "Courier New", monospace;
+}
+
+.hobby .item {
+    display: flex;
+    gap: 15px;
+}
+
+.hobby img {
+     width: 20%;
+     height: auto;
+}
+
+.hobby span {
+    margin-top: 30px;
+}
+
+hr#bottom {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 3cm;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #C4A484;
+}
+
+/* Contact */
+.contact {
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 30px;
+    font-family: "Courier New", monospace;
+    display: flex;
+    grid-column-gap: 10cm;
+    font-weight: bold;
+    justify-content: space-evenly;
+}
+
+.contact span {
+    display: block;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.contact img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    --padding-left: 20px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 4;
+}
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: #794022;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+
+/* Responsive Web Design */
+@media screen and (max-width: 1440px) {
+
+    hr#bottom {
+      display: none;
+    }
+
+    .name {
+        font-size: 45px; /
+        padding-top: 2.5cm;
+        letter-spacing: 2px;
+    }
+
+    .title {
+        font-size: 70px;
+        padding-top: 2.5cm;
+    }
+
+    .navigation {
+        top: 2.5cm;
+        left: 5cm;
+        gap: 2.5cm;
+    }
+
+    .navigation img {
+        width: 130px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+        gap: 2rem;
+    }
+
+    .content img {
+        width: 65%;
+        height: auto;
+    }
+
+    .about-me {
+        width: 75%;
+        margin-left: 0;
+    }
+
+    .about-me span#about-title {
+        font-size: 65px;
+        padding-left: 9cm;
+
+    }
+
+    .about-me span#about-content {
+        font-size: 26px;
+        line-height: 1.6;
+    }
+
+    .hobby {
+        gap: 1.2cm;
+        font-size: 26px;
+    }
+
+    .hobby img {
+        width: 90px;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+        grid-column-gap: 4cm;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    hr#bottom {
+      display: none;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 60px;
+    }
+
+    .name {
+        font-size: 35px;
+    }
+
+    .navbar {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 10px 0;
+   }
+
+    .navbar ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .navbar li {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+        gap: 2rem;
+    }
+
+    .content img {
+        width: 60%;
+        height: auto;
+    }
+
+    .about-me {
+        width: 85%;
+        margin-left: 0;
+    }
+
+    .about-me span#about-title {
+        font-size: 50px;
+        padding-left: 7cm;
+    }
+
+    .about-me span#about-content {
+        font-size: 22px;
+        line-height: 1.6;
+    }
+
+    .hobby {
+        flex-direction: column;
+        align-items: center;
+        font-size: 22px;
+        gap: 1.5cm;
+    }
+
+    .hobby .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hobby img {
+        width: 100px;
+        height: auto;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    .contact img {
+        width: 40px;
+    }
+
+    .contact span {
+        font-size: 20px;
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+        position: fixed;
+
+    }
+
+    hr#bottom {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        height: 30vh;
+        width: 250px;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .title, .name {
+        position: static;
+        font-size: 40px;
+        padding: 10px 0;
+    }
+
+    .hobby {
+        flex-direction: column;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .hobby img {
+        width: 20%;
+        height: auto;
+    }
+
+    .content {
+         flex-direction: column;
+         text-align: center;
+         padding: 10px;
+         gap: 1rem;
+     }
+
+     .about-me {
+         width: 95%;
+     }
+
+     .about-me span#about-title {
+         font-size: 50px;
+         padding-left: 6cm;
+     }
+
+     .about-me span#about-content {
+         font-size: 22px;
+         word-wrap: break-word;
+     }
+
+     .contact {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         font-size: 20px;
+         grid-row-gap: 20px;
+     }
+
+     .contact img {
+         width: 30px;
+     }
+}
+@media screen and (max-width: 425px) {
+    /* Burger Menu */
+    .burger-menu {
+        top: 10px; /* Adjust position if needed */
+        right: 10px;
+    }
+    .burger-menu .bar {
+        width: 25px;
+        height: 3px;
+    }
+
+    /* Navbar (Mobile) */
+    .navbar {
+        top: 60px;  /* Slightly lower to avoid overlapping the header */
+        right: 10px;
+        width: 200px;
+        height: auto;
+        padding: 15px;
+    }
+    .navbar ul {
+        gap: 20px;
+    }
+    .navbar li {
+        font-size: 18px;
+        padding: 5px 0;
+    }
+
+    /* Header */
+    .header {
+        padding: 10px;
+    }
+    .title,
+    .name {
+        font-size: 30px; /* Decrease for smaller screens */
+        padding: 5px 0;
+    }
+
+    /* Content Section */
+    .content {
+        padding: 10px;
+        gap: 1rem;
+    }
+    .content img {
+        width: 80%;
+        height: auto;
+    }
+
+    /* About Me */
+    .about-me {
+        width: 100%;
+    }
+    .about-me span#about-title {
+        font-size: 35px; /* Smaller for narrow screens */
+        padding-left: 1.5cm; /* Remove extra padding */
+    }
+    .about-me span#about-content {
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 2px;
+        word-wrap: break-word;
+    }
+
+    /* Hobby Section */
+    .hobby {
+        font-size: 18px;
+        gap: 1rem;
+    }
+    .hobby img {
+        width: 60px; /* Make images smaller */
+        height: auto;
+    }
+
+    /* Contact Section */
+    .contact {
+        font-size: 18px;
+        padding: 10px;
+        gap: 10px;
+    }
+    .contact img {
+        width: 25px;
+        height: auto;
+    }
+}
